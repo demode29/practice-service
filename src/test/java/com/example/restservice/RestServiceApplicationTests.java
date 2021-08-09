@@ -9,5 +9,4 @@ class RestServiceApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
