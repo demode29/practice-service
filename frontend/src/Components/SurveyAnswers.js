@@ -5,7 +5,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 import CommonTable from './CommonTable';
 
-
 const useStyles = makeStyles({
     root: {
         display: 'flex',
@@ -28,26 +27,24 @@ const SurveyAnswers = (props) => {
         setCurrentTopic(e.target.value);
     }
     const classes = useStyles();
+
+    const getSurveyAnswersByTopic = (topicId) => {
+        fetch('/getSurveyAnswersByTopic?topicId=' + topicId)
+                 .then(response => response.json())
+                 .then(surveyAnswers => {
+                    setSurveyAnswers(surveyAnswers);
+                 }).catch((error) => {
+                     console.error(error);
+                 });
+    };
    
     useEffect(() => {
-        fetch('/getSurveyAnswersByTopic?topicId=' + currentTopic)
-             .then(response => response.json())
-             .then(surveyAnswers => {
-                setSurveyAnswers(surveyAnswers);
-             }).catch((error) => {
-                 console.error(error);
-             });
+        getSurveyAnswersByTopic(currentTopic);     
      },[currentTopic]);
 
      useEffect(() => {
          if(props.topics[0]) {
-            fetch('/getSurveyAnswersByTopic?topicId=' + props.topics[0].topicId)
-                .then(response => response.json())
-                .then(surveyAnswers => {
-                     setSurveyAnswers(surveyAnswers);
-                }).catch((error) => {
-                    console.error(error);
-                });
+            getSurveyAnswersByTopic(props.topics[0].topicId);
          }
      },[props.topics]);
 

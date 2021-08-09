@@ -29,7 +29,7 @@ public class SurveyController {
     public ResponseEntity<Object> addSurvey (@Valid @RequestBody Survey survey) {
         databaseService.addSurvey(survey);
 
-        return new ResponseEntity<>("Product is updated successsfully", HttpStatus.OK);
+        return new ResponseEntity<>("Survey is added successsfully", HttpStatus.OK);
     }
 
     @PostMapping(value = "/submitAnswer")
