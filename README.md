@@ -32,6 +32,10 @@ Example request:
 ### How to setup
 I used maven and Intellij for this project. We can import our existing project to our IDE and then build using maven.
 
+### Tests
+I also created tests for testing endpoints. Can be found in "/src/test/java/com.example.restservice". TestEndPoint.java has 2 test cases which
+tests /createSurveys and /surveys endpoints.
+
 ## Frontend
 Frontend is written with React and uses Material UI for some components. Frontend codes can be found in "/frontend/src" and related screenshots can be found in "/screenshots"
 React app can be accessed from local host port 3000. I also added proxy to forward requests to port 8080 (there were cors errors).
