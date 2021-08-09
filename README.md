@@ -30,7 +30,8 @@ Example request:
 ![Alt text](/screenshots/requestcreatesurveys.png?raw=true "Title")
 
 ### How to setup
-I used maven and Intellij for this project. We can import our existing project to our IDE and then build using maven.
+I used maven and Intellij for this project. We can import our existing project to our IDE and then build using maven. Also i added .jar file "rest-service-0.0.1-SNAPSHOT.jar".
+We can run with "java -jar rest-service-0.0.1-SNAPSHOT.jar" our rest service.
 
 ### Tests
 I also created tests for testing endpoints. Can be found in "/src/test/java/com.example.restservice". TestEndPoint.java has 2 test cases which
