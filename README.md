@@ -1,4 +1,4 @@
-# aegon-practice-service
+# practice-service
 
 This project consists of two parts: frontend and backend.
 
